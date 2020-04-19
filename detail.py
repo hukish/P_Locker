@@ -75,4 +75,24 @@ class Detail:
                     return True
 
         return False
+
+
+    @classmethod
+    def display_details(cls):
+        '''
+        method that returns the detail list
+        '''
+        return cls.detail_list
+    
+
+        def passsword(self,length):
+        """Generate a random password."""
+        alphabet = string.ascii_letters + string.digits
+        while True:
+            pw = ''.join(random.choice(alphabet) for i in range(length))
+            if (any(c.islower() for c in pw)
+                    and any(c.isupper() for c in pw)
+                    and any(c.isdigit() for c in pw)):
+                break
+        return(pw)
     
