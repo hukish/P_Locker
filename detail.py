@@ -35,16 +35,14 @@ class Detail:
         Detail.detail_list.append(self)
    
 
-    def test_find_detail_by_password(self):
+    def delete_detail(self):
         '''
-        test to check if we can find a detail by account password and display information
+        delete_detail method deletes a saved detail from the detail_list
         '''
 
-        self.new_detail.save_detail()
-        test_detail = Detail("Test", "user", "2222222222",
-                               "xyz@user.com")  # new detail
-        test_detail.save_detail()
+        Detail.detail_list.remove(self)
+                                
 
-        found_detail = Detail.find_by_password("2222222222")
 
-        self.assertEqual(found_detail.email, test_detail.email)
+
+  
