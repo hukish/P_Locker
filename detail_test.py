@@ -38,3 +38,16 @@ class TestDetail(unittest.TestCase):
         '''
         self.new_detail.save_detail()  # saving the new detail
         self.assertEqual(len(Detail.detail_list), 1)
+     def test_find_detail_by_password(self):
+        '''
+        test to check if we can find a detail by account password and display information
+        '''
+
+        self.new_detail.save_detail()
+        test_detail = Detail("Test", "user", "2222222222",
+                               "xyz@user.com")  # new detail
+        test_detail.save_detail()
+
+        found_detail = Detail.find_by_password("2222222222")
+
+        self.assertEqual(found_detail.email, test_detail.email)
