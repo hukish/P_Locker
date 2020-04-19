@@ -24,3 +24,13 @@ At the terminal, run the following command:
   | ----------------------|:--------------------------:|:---------------------------------:|
   | allowed action       | a user type in the action | the program fulfil the action      |
 
+
+### Built With
+
+* vs code - The text editor used
+* Git - The version control environment Used
+
+
+## Technologies Used
+
+* Python
