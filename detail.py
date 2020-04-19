@@ -26,4 +26,11 @@ class Detail:
         self.account_password = password
         self.email = email
 
-    def save_detail(self):   
+    def save_detail(self):
+
+        '''
+        save_detail method saves detail objects into detail_list
+        '''
+
+        Detail.detail_list.append(self)
+   
