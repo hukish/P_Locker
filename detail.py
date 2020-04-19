@@ -7,3 +7,6 @@ import sys
 import random
 import string
 import sys
+
+
+class Detail:
