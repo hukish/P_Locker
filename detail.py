@@ -25,3 +25,5 @@ class Detail:
         self.account_name = account_name
         self.account_password = password
         self.email = email
+
+    def save_detail(self):   
