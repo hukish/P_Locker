@@ -18,3 +18,9 @@ At the terminal, run the following command:
 ./run.py
 
 ###BDD
+
+
+ | Given                 | When                       | Then                                |
+  | ----------------------|:--------------------------:|:---------------------------------:|
+  | allowed action       | a user type in the action | the program fulfil the action      |
+
