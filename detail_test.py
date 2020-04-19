@@ -66,3 +66,26 @@ class TestDetail(unittest.TestCase):
 
         detail_exists = Detail.detail_exist("2222222222")
         self.assertTrue(detail_exists)
+
+
+    def test_display_all_details(self):
+        '''
+        method that returns a list of all details saved
+        '''
+
+        self.assertEqual(Detail.display_details(), Detail.detail_list)
+
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found detail
+        '''
+
+        self.new_detail.save_detail()
+        Detail.copy_email("2222222222")
+
+        self.assertEqual(self.new_detail.email, pyperclip.paste())
+
+
+if __name__ == '__main__':
+    unittest.main()
+        
