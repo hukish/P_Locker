@@ -110,3 +110,111 @@ def main():
     print("="*62)
     print(f"Hello {user_name}. How do we help you?")
     print('\n')
+    
+
+    while True:
+                    print(
+                        "Use these short codes to specify how you we may help you : un - create a new user account, dd - display details, fd -find an account detail, exit() -exit the detail list , del -delete detail, clear() -Delete all, To generate password run this command on your terminal: $ python3.6 password_gen.py")
+
+                    short_code = input().lower()
+
+                    if short_code == 'un':
+                            print("New User Acccount")
+                            print("="*71)
+
+                            print("Enter registered account user name ....")
+                            f_name = input()
+
+                            print("Enter account name(eg. Facebook, WhatsApp)")
+                            account_name = input()
+
+                            print("Enter Password")
+                            p_password = input()
+
+                            print("Email address or account password used to register the account ...")
+                            e_address = input()
+
+                            # create and save new Detail.
+                            save_details(create_detail(
+                                f_name, account_name, p_password, e_address))
+                            print('\n')
+                            print(f"New detail {f_name} {account_name}  created")
+                            print('\n')
+
+                    elif short_code == 'dc':
+
+                            if display_details():
+                                    print("Here is a list of all your details")
+                                    print('\n')
+
+                                    for detail in display_details():
+                                            print(
+                                                f"{detail.user_name} {detail.account_name} {e_address} {detail.account_password}")
+
+                                    print('\n')
+                            else:
+                                    print('\n')
+                                    print(
+                                        "You dont seem to have any details saved yet")
+                                    print('\n')
+
+                    elif short_code == 'fc':
+
+                            print("Enter the password you want to search for")
+
+                            search_password = input()
+                            if check_existing_details(search_password):
+                                    search_detail = find_detail(
+                                        search_password)
+                                    print(
+                                        f"{search_detail.user_name} {search_detail.account_name}")
+                                    print('=' * 80)
+
+                                    print(
+                                        f"account password.......{search_detail.account_password}")
+                                    print(
+                                        f"Email address.......{search_detail.email}")
+                            else:
+                                    print("That detail does not exist")
+
+                    elif short_code == "del":
+                         print("Enter the password of the detail you want to delete")
+                         search_password = input()
+                         if check_existing_details(search_password):
+                             search_detail = find_detail(search_password)
+                             print(
+                                 f"{search_detail.user_name} {search_detail.account_name}")
+                             print("_"*20)
+                             detail.delete_detail()
+                        
+                             print('\n')
+                             print(
+                                 f'{f_name} {e_address} Successfully deleted!!')
+                             print('\n')
+
+                    elif short_code == 'clear()':
+
+                            if delete_details():
+                                    print("Here is a list of all your details")
+                                    print('\n')
+
+                                    for detail in delete_details():
+                                            print(
+                                                f"{detail.user_name} {detail.account_name} {e_address} {detail.account_password}")
+
+                                    print('\n')
+                            else:
+                                    print('\n')
+                                    print(
+                                        "You dont seem to have any account details saved yet")
+                                    print('\n')
+                    elif short_code == "exit()":
+                                print("Safely secured!!")
+                                
+                                #break
+                    else:
+                            print(
+                                "I really didn't get that. Please use the short codes")
+
+
+
