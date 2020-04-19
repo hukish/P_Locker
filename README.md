@@ -34,3 +34,15 @@ At the terminal, run the following command:
 ## Technologies Used
 
 * Python
+##Contributing
+
+Any contributions to this projects will be greatly appreciated. If you want to contribute to it, here are the suggested instructions:
+ Clone this GitHub repository to your local machine.
+```buildoutcfg
+git clone https://github.com/hukish/P-Locker.git
+```
+* Make your contributions.
+* Email me the zipped project at HUKISHgmail.com , or
+* Request permissions to post your contribution at my GitHub repository through the same email address.
+
+Alternatively, you could email the main developer at HUKISH@gmail.com with ideas on how this project could be more effective, efficient or beneficial.
