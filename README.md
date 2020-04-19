@@ -46,3 +46,10 @@ git clone https://github.com/hukish/P-Locker.git
 * Request permissions to post your contribution at my GitHub repository through the same email address.
 
 Alternatively, you could email the main developer at HUKISH@gmail.com with ideas on how this project could be more effective, efficient or beneficial.
+
+## Versioning
+Used GIT and GitHub. There are commits attached to the entire project to show the management of versions.
+
+## Author
+
+ hudson, any other contributor after the completion of the work can be viewed at this GitHub repository
