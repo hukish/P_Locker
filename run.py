@@ -103,3 +103,10 @@ def copy_email(cls, password):
     pyperclip.copy(detail_found.email)
 
 
+def main():
+    print('Your secret word is used to access this vault.')
+    print("Hello Welcome to your password vault. What is your secret word?")
+    user_name = input()
+    print("="*62)
+    print(f"Hello {user_name}. How do we help you?")
+    print('\n')
