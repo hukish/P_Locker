@@ -61,4 +61,18 @@ class Detail:
 
 
 
-  
+        @classmethod
+    def detail_exist(cls, password):
+        '''
+        Method that checks if a detail exists from the detail list.
+        Args:
+            password: account password to search if it exists
+        Returns :
+            Boolean: True or false depending if the detail exists
+        '''
+        for detail in cls.detail_list:
+            if detail.account_password == password:
+                    return True
+
+        return False
+    

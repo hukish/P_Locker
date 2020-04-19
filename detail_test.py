@@ -51,3 +51,7 @@ class TestDetail(unittest.TestCase):
         found_detail = Detail.find_by_password("2222222222")
 
         self.assertEqual(found_detail.email, test_detail.email)
+
+
+
+      
