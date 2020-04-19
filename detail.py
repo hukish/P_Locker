@@ -40,8 +40,24 @@ class Detail:
         delete_detail method deletes a saved detail from the detail_list
         '''
 
+     
         Detail.detail_list.remove(self)
-                                
+
+         @classmethod
+    def find_by_password(cls, password):
+        '''
+        Method that takes in a password and returns a detail that matches that password.
+
+        Args:
+            password: account password to search for
+        Returns :
+            detail of person that matches the password.
+        '''
+
+        for detail in cls.detail_list:
+            if detail.account_password == password:
+                return detail
+                               
 
 
 
