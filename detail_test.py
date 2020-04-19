@@ -31,3 +31,10 @@ class TestDetail(unittest.TestCase):
         self.assertEqual(self.new_detail.account_password, "2222222222")
         self.assertEqual(self.new_detail.email, "xyz@user.com")
     
+    def test_save_detail(self):
+        '''
+        test_save_detail test case to test if the detail object is saved into
+         the detail list
+        '''
+        self.new_detail.save_detail()  # saving the new detail
+        self.assertEqual(len(Detail.detail_list), 1)
