@@ -8,3 +8,12 @@ Description
 ## Deployment
 
 To run the program, link all classes to the run file and use the following code at the beginning of your main code:
+
+buildoutcfg
+#!/usr/bin/env python3.6
+
+At the terminal, run the following command:
+
+..chmod +x run.py
+./run.py
+
