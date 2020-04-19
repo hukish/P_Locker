@@ -54,4 +54,15 @@ class TestDetail(unittest.TestCase):
 
 
 
-      
+    def test_detail_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the detail.
+        '''
+
+        self.new_detail.save_detail()
+        test_detail = Detail("Test", "user", "2222222222",
+                               "xyz@user.com")  # new detail
+        test_detail.save_detail()
+
+        detail_exists = Detail.detail_exist("2222222222")
+        self.assertTrue(detail_exists)
