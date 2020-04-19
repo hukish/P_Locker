@@ -96,16 +96,10 @@ class Detail:
                 break
         return(pw)
 
-
-    def test_display_all_details(self):
-        '''
-        method that returns a list of all details saved
-        '''
-
-        self.assertEqual(Detail.display_details(), Detail.detail_list)
-
-   
-
+    @classmethod
+    def copy_email(cls,password):
+        detail_found = Detail.find_by_password(password)
+        pyperclip.copy(detail_found.email)
 
 if __name__ == '__main__':
     unittest.main()    
