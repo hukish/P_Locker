@@ -95,4 +95,18 @@ class Detail:
                     and any(c.isdigit() for c in pw)):
                 break
         return(pw)
+
+
+    def test_display_all_details(self):
+        '''
+        method that returns a list of all details saved
+        '''
+
+        self.assertEqual(Detail.display_details(), Detail.detail_list)
+
+   
+
+
+if __name__ == '__main__':
+    unittest.main()    
     
