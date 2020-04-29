@@ -10,8 +10,7 @@ import sys
 
 
 class Detail:
-
-        """
+    """
     Class that generates new cases of details.
     """
 
@@ -26,24 +25,37 @@ class Detail:
         self.account_password = password
         self.email = email
 
+# detail_list = [] # Empty detail list
+ # Init method up here
+    # def password(self,length):
+    #     """Generate a random password."""
+    #     alphabet = string.ascii_letters + string.digits
+    
     def save_detail(self):
-
         '''
         save_detail method saves detail objects into detail_list
         '''
 
         Detail.detail_list.append(self)
-   
 
     def delete_detail(self):
         '''
         delete_detail method deletes a saved detail from the detail_list
         '''
 
-     
         Detail.detail_list.remove(self)
 
-         @classmethod
+    # def generate_password(self):
+
+    #     """
+    #     a method that gnerates pasword using choice and random key words
+    #     """
+    #     Detai.detail.join(random.choice(alphabet) for i in range(length))
+
+
+
+        
+    @classmethod
     def find_by_password(cls, password):
         '''
         Method that takes in a password and returns a detail that matches that password.
@@ -57,11 +69,8 @@ class Detail:
         for detail in cls.detail_list:
             if detail.account_password == password:
                 return detail
-                               
 
-
-
-        @classmethod
+    @classmethod
     def detail_exist(cls, password):
         '''
         Method that checks if a detail exists from the detail list.
@@ -76,16 +85,14 @@ class Detail:
 
         return False
 
-
     @classmethod
     def display_details(cls):
         '''
         method that returns the detail list
         '''
         return cls.detail_list
-    
 
-        def passsword(self,length):
+    def passsword(self,length):
         """Generate a random password."""
         alphabet = string.ascii_letters + string.digits
         while True:
@@ -95,12 +102,18 @@ class Detail:
                     and any(c.isdigit() for c in pw)):
                 break
         return(pw)
-
+# ......................
     @classmethod
     def copy_email(cls,password):
         detail_found = Detail.find_by_password(password)
         pyperclip.copy(detail_found.email)
 
-if __name__ == '__main__':
-    unittest.main()    
-    
+    @classmethod
+    def delete_details(cls):
+
+        '''
+        method that returns the detail list
+        '''
+        return cls.detail_list
+
+

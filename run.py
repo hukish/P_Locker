@@ -1,9 +1,11 @@
+#!/usr/bin/env python3.6
 from detail import Detail
-
+# from password_gen import Generator
 import pyperclip
 import random
 import string
 import sys
+######Create functions to implement what the behaviours we have created####
 
 
 def create_detail(u_name, lname, account, email):
@@ -110,7 +112,6 @@ def main():
     print("="*62)
     print(f"Hello {user_name}. How do we help you?")
     print('\n')
-    
 
     while True:
                     print(
@@ -141,7 +142,7 @@ def main():
                             print(f"New detail {f_name} {account_name}  created")
                             print('\n')
 
-                    elif short_code == 'dc':
+                    elif short_code == 'dd':
 
                             if display_details():
                                     print("Here is a list of all your details")
@@ -158,7 +159,7 @@ def main():
                                         "You dont seem to have any details saved yet")
                                     print('\n')
 
-                    elif short_code == 'fc':
+                    elif short_code == 'fd':
 
                             print("Enter the password you want to search for")
 
@@ -210,16 +211,23 @@ def main():
                                     print('\n')
                     elif short_code == "exit()":
                                 print("Safely secured!!")
-                                
-                                #break
+
+# def password(length):
+#     """Generate a random password."""
+#     alphabet = string.ascii_letters + string.digits
+#     while True:
+#         pw = ''.join(random.choice(alphabet) for i in range(length))
+#         if (any(c.islower() for c in pw)
+#                 and any(c.isupper() for c in pw)
+#                 and any(c.isdigit() for c in pw)):
+            
+#     return(pw)
+                                break
                     else:
                             print(
                                 "I really didn't get that. Please use the short codes")
 
 
-
-
-
 if __name__ == '__main__':
-    main()
 
+    main()
